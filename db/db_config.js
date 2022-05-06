@@ -5,25 +5,12 @@ const env = process.env.NODE_ENV || "Dev";
 
 let connection = {};
 
-if (env !== "Dev") {
-  connection = {
-    connectionString: process.env.DATABASE_URL,
-    ssl: {
-      rejectUnauthorized: false,
-    },
-  };
-} else {
-  connection = {
-    database: process.env.DB_DATABASE,
-    user: process.env.DB_USER,
-    localhost: process.env.DB_HOST,
-    password: process.env.DB_PASSWORD,
-    PORT: process.env.DB_PORT,
-    ssl: {
-      rejectUnauthorized: false,
-    },
-  };
-}
+connection = {
+  connectionString: process.env.DB_DATABASE_URI,
+  ssl: {
+    rejectUnauthorized: false,
+  },
+};
 
 const pool = new Pool(connection);
 
