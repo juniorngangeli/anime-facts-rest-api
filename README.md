@@ -1,15 +1,16 @@
-
 # anime-facts-rest-api 🐱‍🚀
 
-An API in Node.js that will return anime facts. [Check docs](https://chandan-02.github.io/anime-facts-rest-api/)
+An API in Node.js that will return anime facts.
 
 # Usage :
 
-  > Note: This project is being hosted on Heroku with free dyno; so, there can/will be a delay for the first time you make a request, subsequent requests will be faster.
+> Note: This project is being hosted on Heroku with free dyno; so, there can/will be a delay for the first time you make a request, subsequent requests will be faster.
 
 ### Home Route
-Get all the available anime's list : `https://anime-facts-rest-api.herokuapp.com/api/v1`
-*returns* : 
+
+Get all the available anime's list : `https://kd-anime-facts.herokuapp.com/api/v1`
+_returns_ :
+
 ```
 {
 	success:true,
@@ -28,13 +29,17 @@ Get all the available anime's list : `https://anime-facts-rest-api.herokuapp.com
 	]
 }
 ```
-### Anime Facts Route 
-Get all facts related to an Anime  : `https://anime-facts-rest-api.herokuapp.com/api/v1/:anime_name`
+
+### Anime Facts Route
+
+Get all facts related to an Anime : `https://kd-anime-facts.herokuapp.com/api/v1/:anime_name`
+
 > Provide an anime name (from the available option) in place of `:anime_name`
 
-***Example*** : 
-`https://anime-facts-rest-api.herokuapp.com/api/v1/fma_brotherhood`
-*returns* : 
+**_Example_** :
+`https://kd-anime-facts.herokuapp.com/api/v1/fma_brotherhood`
+_returns_ :
+
 ```
 {
 	success:true,
@@ -53,13 +58,17 @@ Get all facts related to an Anime  : `https://anime-facts-rest-api.herokuapp.com
 	]
 }
 ```
-### Specific Fact Route 
-Get all facts related to an Anime  : `https://anime-facts-rest-api.herokuapp.com/api/v1/:anime_name/:fact_id`
+
+### Specific Fact Route
+
+Get all facts related to an Anime : `https://kd-anime-facts.herokuapp.com/api/v1/:anime_name/:fact_id`
+
 > Provide an anime name & fact id (from the available option) in place of `:anime_name & :fact_id`
 
-***Example*** : 
-`https://anime-facts-rest-api.herokuapp.com/api/v1/fma_brotherhood/2`
-*returns* : 
+**_Example_** :
+`https://kd-anime-facts.herokuapp.com/api/v1/fma_brotherhood/2`
+_returns_ :
+
 ```
 {
 	success:true,
@@ -67,7 +76,7 @@ Get all facts related to an Anime  : `https://anime-facts-rest-api.herokuapp.com
 			fact_id: 2,
 			fact: "Arakawa Actually Bought Military Prop Guns For Drawing References"
 	}
-	
+
 }
 ```
 
